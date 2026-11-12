@@ -1,15 +1,20 @@
 
-name: Python CI Pipeline
+name: Project 01 - Python CI Pipeline
 
-# Trigger the workflow when code is pushed  or a pull request is created for main.
 on:
   push:
     branches:
       - main
+    paths:
+      - '01-GitHub-Actions-CICD/**'
+      - '.github/workflows/ci.yml'
 
   pull_request:
     branches:
       - main
+    paths:
+      - '01-GitHub-Actions-CICD/**'
+      - '.github/workflows/ci.yml'
 
 jobs:
   test:
@@ -17,23 +22,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Download repository source code
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2: Configure Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
 
-      # Step 3: Install dependencies
       - name: Install dependencies
+        working-directory: 01-GitHub-Actions-CICD
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Step 4: Execute automated tests
       - name: Run tests
+        working-directory: 01-GitHub-Actions-CICD
         run: pytest -v
 

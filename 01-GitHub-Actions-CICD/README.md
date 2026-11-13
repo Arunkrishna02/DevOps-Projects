@@ -219,3 +219,13 @@ GitHub: https://github.com/Arunkrishna02/DevOps-Projects
 Successfully implemented a basic Continuous Integration pipeline using GitHub Actions and Pytest.
 
 This project demonstrates how developers can automate application testing, detect errors early, troubleshoot pipeline failures and maintain a reliable development workflow.
+
+## Pipeline Execution Evidence
+
+### Successful CI Pipeline
+
+![Successful CI Pipeline](docs/screenshots/ci-success.png)
+
+### Intentional Failure Detection
+
+![CI Failure Detection](docs/screenshots/ci-failure.png)

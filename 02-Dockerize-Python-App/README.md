@@ -94,13 +94,6 @@ cp .env.example .env
 
 Edit the `.env` file:
 
-```env
-DB_NAME=calculator
-DB_USER=calculator_user
-DB_PASSWORD=change_this_password
-DB_ROOT_PASSWORD=change_this_root_password
-DB_PORT=3306
-APP_PORT=8082
 ```
 
 Environment variables are used to configure the application and database without hardcoding credentials in the source code.

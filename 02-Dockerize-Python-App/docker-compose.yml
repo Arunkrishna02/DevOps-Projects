@@ -3,7 +3,7 @@ services:
     build: .
     container_name: calculator-web
     ports:
-      - "${APP_PORT}:5000"
+      - "127.0.0.1:${APP_PORT}:5000"
     environment:
       PORT: 5000
       DB_HOST: db
